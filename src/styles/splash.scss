@@ -1,0 +1,86 @@
+@import "./common.scss";
+
+.rdp-splash {
+  $self: &;
+  @include primary-background;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 25vh;
+  text-align: left;
+
+  &--left {
+    align-items: flex-start;
+  }
+
+  &--right {
+    align-items: flex-end;
+    text-align: right;
+  }
+
+  &--centre {
+    align-items: center;
+  }
+
+  &__title {
+    display: flex;
+    flex-flow: column nowrap;
+    flex-grow: 2;
+
+    #{$self}__title-header {
+      font-size: 4rem;
+      margin-top: 0;
+      margin-bottom: 2vh;
+    }
+
+    #{$self}__title-sub-header {
+      font-size: 1.3rem;
+      margin: 0;
+
+      &--right {
+        align-self: end;
+      }
+    }
+  }
+
+  #{$self}__actions {
+    flex-grow: 1;
+    &--left {
+      align-self: flex-start;
+    }
+
+    &--right {
+      align-self: flex-end;
+    }
+
+    &--centre {
+      align-self: center;
+    }
+
+    #{$self}__action-button {
+      @extend %button-base;
+      @extend %transparent-button;
+      border: 2px solid var(--rdp-theme-text-on-primary);
+      text-decoration: none;
+
+      &:not(:first-child) {
+        margin-left: 2vw;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .rdp-splash {
+    padding-left: 15vw;
+    padding-right: 15vw;
+  }
+}

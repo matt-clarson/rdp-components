@@ -1,0 +1,21 @@
+.rdp-error {
+  $self: &;
+  color: var(--rdp-theme-error);
+
+  &__message-lead {
+    display: inline-flex;
+    align-items: center;
+
+    #{$self}__message-icon {
+      margin-right: 5px;
+    }
+  }
+
+  &__error-text {
+    margin: 5px 0 5px 0;
+
+    &:not(:last-child)::after {
+      content: ";";
+    }
+  }
+}

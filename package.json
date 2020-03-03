@@ -1,0 +1,36 @@
+{
+  "name": "rdp-components",
+  "version": "0.0.0",
+  "description": "Red Panda Components for React",
+  "main": "index.js",
+  "scripts": {
+    "storybook:dev": "start-storybook --ci -p 5000",
+    "test": "jest"
+  },
+  "keywords": [
+    "react",
+    "component-library",
+    "storybook"
+  ],
+  "author": "matt-clarson",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.6",
+    "@babel/preset-env": "^7.8.6",
+    "@babel/preset-react": "^7.8.3",
+    "@storybook/addon-actions": "^5.3.14",
+    "@storybook/addon-info": "^5.3.14",
+    "@storybook/addon-knobs": "^5.3.14",
+    "@storybook/addon-storysource": "^5.3.14",
+    "@storybook/react": "^5.3.14",
+    "babel-loader": "^8.0.6",
+    "node-sass": "^4.13.1",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "sass-loader": "^8.0.2"
+  },
+  "dependencies": {
+    "nanoid": "^2.1.11"
+  }
+}

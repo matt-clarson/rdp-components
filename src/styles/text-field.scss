@@ -1,0 +1,29 @@
+.rdp-text-field {
+  $self: &;
+  display: flex;
+  flex-flow: column nowrap;
+  margin-bottom: 2vh;
+
+  &__input {
+    font-size: 1rem;
+    padding: 0.5vh 0.5vw 0.5vh 1vw;
+    border: 1px solid black;
+    border-radius: 5px;
+    resize: block;
+
+    &:focus {
+      border-color: var(--rdp-theme-primary);
+    }
+  }
+
+  &__char-count {
+    text-align: end;
+    display: none;
+  }
+
+  &:focus-within {
+    #{$self}__char-count {
+      display: inline;
+    }
+  }
+}

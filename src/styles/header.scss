@@ -1,0 +1,36 @@
+@import "./common.scss";
+
+.rdp-header {
+  $self: &;
+  @include primary-background;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 1vh 2vw;
+
+  &__title {
+    margin: 0;
+    flex-grow: 1;
+
+    &:not(:first-child) {
+      margin-left: 1vw;
+    }
+
+    #{$self}__title-content {
+      color: inherit;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    flex-flow: row wrap;
+    max-width: 35%;
+  }
+
+  &__action-button {
+    @extend %button-base;
+    @extend %transparent-button;
+  }
+}
