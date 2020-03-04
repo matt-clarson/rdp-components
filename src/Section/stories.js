@@ -49,7 +49,7 @@ export const flat = () => (
 
 export const grouped = () => (
   <SectionGroup>
-    <Section>
+    <Section style={{ flexBasis: "40%" }}>
       <h2>{"Section 1"}</h2>
       <p>
         {
@@ -57,7 +57,7 @@ export const grouped = () => (
         }
       </p>
     </Section>
-    <Section>
+    <Section style={{ flexBasis: "20%" }}>
       <h2>{"Section2"}</h2>
       <p>
         {
