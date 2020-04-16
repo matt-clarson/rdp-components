@@ -2,16 +2,23 @@ const path = require("path");
 
 module.exports = {
   addons: [
+    "@storybook/preset-typescript",
     "@storybook/addon-actions/register",
     "@storybook/addon-knobs/register"
   ],
-  stories: ["../src/**/stories.js", "../src/**/*.stories.js"],
+  stories: ["../stories/*.stories.tsx"],
   webpackFinal: async config => {
-    config.module.rules.push({
-      test: /\.scss$/,
-      use: ["style-loader", "css-loader", "sass-loader"],
-      include: path.join(__dirname, "..", "src")
-    });
+    config.module.rules.push(
+      {
+        test: /\.scss$/,
+        use: ["style-loader", "css-loader", "sass-loader"],
+        include: path.join(__dirname, "..", "src")
+      },
+      {
+        test: /\.tsx$/,
+        use: ["react-docgen-typescript-loader"]
+      }
+    );
     return config;
   }
 };
