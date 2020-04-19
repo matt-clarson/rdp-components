@@ -1,7 +1,7 @@
 import React from "react";
 import { isElement } from "react-is";
 import { ComponentFactory, RDPBaseProps } from "../utils/ComponentFactory";
-import Icon from "../Icon";
+import { Icon } from "../Icon";
 import { bem } from "../utils/css";
 
 import "../styles/error.scss";

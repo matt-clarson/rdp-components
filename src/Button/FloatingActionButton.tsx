@@ -1,7 +1,7 @@
 import React from "react";
 import { ComponentFactory, RDPButtonProps } from "../utils/ComponentFactory";
 import { bem } from "../utils/css";
-import Icon from "../Icon";
+import { Icon } from "../Icon";
 
 import "../styles/button.scss";
 
@@ -20,7 +20,7 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
       defaultTag="button"
       fixedClassName={disabled ? css.mod`disabled` : css}
       disabled={disabled}
-      {...baseProps}
+      {...{ ...baseProps, href: disabled ? undefined : baseProps.href }}
     >
       <Icon icon={icon} />
     </ComponentFactory>

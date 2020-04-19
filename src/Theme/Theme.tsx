@@ -1,6 +1,6 @@
 import React from "react";
 import kebabCase from "lodash/kebabCase";
-import { ComponentFactory, RDPBaseProps } from "./utils/ComponentFactory";
+import { ComponentFactory, RDPBaseProps } from "../utils/ComponentFactory";
 
 export interface ThemeProps extends RDPBaseProps<HTMLElement> {
   colours: { [key: string]: string };
