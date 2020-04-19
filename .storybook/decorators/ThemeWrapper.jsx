@@ -1,5 +1,5 @@
 import React from "react";
-import Theme from "../../src/Theme";
+import { Theme } from "../../src/Theme";
 
 export default Story => (
   <Theme
