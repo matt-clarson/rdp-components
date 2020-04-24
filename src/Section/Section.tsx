@@ -29,11 +29,11 @@ export const Section: React.FC<SectionProps> = ({
         : css.mod`flat`;
   else className = flat ? css.mod`flat` : css.mod`raised`;
   const onMouseEnter = (event: React.MouseEvent<HTMLElement>) => {
-    if (isInGroup) sectionGroup.setActive(componentId.current);
+    if (isInGroup) sectionGroup.setActive?.(componentId.current);
     if (baseProps.onMouseEnter) baseProps.onMouseEnter(event);
   };
   const onMouseLeave = (event: React.MouseEvent<HTMLElement>) => {
-    if (isInGroup) sectionGroup.setActive(null);
+    if (isInGroup) sectionGroup.setActive?.(null);
     if (baseProps.onMouseLeave) baseProps.onMouseLeave(event);
   };
 

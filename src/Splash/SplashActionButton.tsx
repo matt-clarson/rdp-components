@@ -8,12 +8,14 @@ export interface SplashActionButtonProps extends RDPButtonProps {}
 
 export const SplashActionButton: React.FC<SplashActionButtonProps> = ({
   children,
+  disabled,
   ...baseProps
 }) => (
   <ComponentFactory
     defaultTag="button"
     fixedClassName={css.elem`action-button`}
-    {...baseProps}
+    disabled={disabled}
+    {...{ ...baseProps, href: disabled ? undefined : baseProps.href }}
   >
     {children}
   </ComponentFactory>

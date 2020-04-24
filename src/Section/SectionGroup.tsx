@@ -5,12 +5,11 @@ import { bem } from "../utils/css";
 export interface SectionGroupProps extends RDPBaseProps<HTMLElement> {}
 export interface ISectionGroupContext {
   active: string | null;
-  setActive: (active: string | null) => void;
+  setActive?: (active: string | null) => void;
 }
 
 export const SectionGroupContext = createContext<ISectionGroupContext>({
-  active: null,
-  setActive: () => {}
+  active: null
 });
 
 export const SectionGroup: React.FC<SectionGroupProps> = ({

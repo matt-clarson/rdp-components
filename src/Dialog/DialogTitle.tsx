@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { ComponentFactory, RDPBaseProps } from "../utils/ComponentFactory";
 import { DialogContext, css } from "./Dialog";
-import Icon from "../Icon";
+import { Icon } from "../Icon";
 
 export interface DialogTitleProps extends RDPBaseProps<HTMLElement> {
   closeButton?: boolean;

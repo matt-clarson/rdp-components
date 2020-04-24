@@ -5,19 +5,15 @@
   "main": "index.js",
   "scripts": {
     "storybook:dev": "start-storybook --ci -p 5000",
-    "test": "jest"
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "USE_COVERAGE=true jest"
   },
-  "keywords": [
-    "react",
-    "component-library",
-    "storybook"
-  ],
+  "keywords": ["react", "component-library", "storybook"],
   "author": "matt-clarson",
   "license": "MIT",
   "devDependencies": {
     "@babel/cli": "^7.8.4",
-    "@babel/core": "^7.8.6",
-    "@babel/preset-env": "^7.8.6",
     "@babel/preset-react": "^7.8.3",
     "@storybook/addon-actions": "^5.3.14",
     "@storybook/addon-info": "^5.3.14",
@@ -25,16 +21,21 @@
     "@storybook/addon-storysource": "^5.3.14",
     "@storybook/preset-typescript": "^3.0.0",
     "@storybook/react": "^5.3.14",
+    "@testing-library/jest-dom": "^5.5.0",
+    "@testing-library/react": "^10.0.2",
+    "@types/jest": "^25.2.1",
     "@types/lodash": "^4.14.150",
     "@types/nanoid": "^2.1.0",
     "@types/react-is": "^16.7.1",
     "babel-loader": "^8.0.6",
     "fork-ts-checker-webpack-plugin": "^4.1.3",
+    "jest": "^25.3.0",
     "node-sass": "^4.13.1",
     "react": "^16.13.0",
     "react-docgen-typescript-loader": "^3.7.2",
     "react-dom": "^16.13.0",
     "sass-loader": "^8.0.2",
+    "ts-jest": "^25.4.0",
     "typescript": "^3.8.3"
   },
   "dependencies": {

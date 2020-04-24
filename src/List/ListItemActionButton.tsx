@@ -1,6 +1,6 @@
 import React from "react";
 import { ComponentFactory, RDPButtonProps } from "../utils/ComponentFactory";
-import Icon from "../Icon";
+import { Icon } from "../Icon";
 import { css } from "./List";
 
 export interface ListItemActionButtonProps extends RDPButtonProps {
@@ -11,13 +11,15 @@ export const ListItemActionButton: React.FC<ListItemActionButtonProps> = ({
   title,
   icon,
   onClick,
+  disabled,
   children,
   ...baseProps
 }) => (
   <ComponentFactory
     defaultTag="button"
     fixedClassName={css.elem`item-action-button`}
-    {...{ onClick, ...baseProps }}
+    disabled={disabled}
+    {...{ onClick, ...baseProps, href: disabled ? undefined : baseProps.href }}
   >
     {icon && <Icon icon={icon} title={title} />}
     {children}

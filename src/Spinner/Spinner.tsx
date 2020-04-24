@@ -1,17 +1,19 @@
 import React from "react";
-import { ComponentFactory, RDPBaseProps } from "./utils/ComponentFactory";
-import { bem } from "./utils/css";
-import { useMeasureString } from "./utils/measure-string";
+import { ComponentFactory, RDPBaseProps } from "../utils/ComponentFactory";
+import { bem } from "../utils/css";
+import { useMeasureString } from "../utils/measure-string";
 
 import "./styles/spinner.scss";
 
 export enum SpinnerSize {
-  EXTRA_SMALL = 60,
-  SMALL = 110,
-  MEDIUM = 160,
-  LARGE = 210,
-  EXTRA_LARGE = 310
+  EXTRA_SMALL = "xs",
+  SMALL = "s",
+  MEDIUM = "m",
+  LARGE = "l",
+  EXTRA_LARGE = "xl"
 }
+
+const sizes = { xs: 60, s: 110, m: 160, l: 210, xl: 310 };
 
 export interface SpinnerProps extends RDPBaseProps<HTMLElement> {
   size?: SpinnerSize;
@@ -25,7 +27,7 @@ export const Spinner: React.FC<SpinnerProps> = ({
 }) => {
   const { width: messageWidth } = useMeasureString(message);
   const css = bem`rdp-spinner`;
-  const dropMessage = messageWidth > size;
+  const dropMessage = messageWidth > sizes[size];
   return (
     <ComponentFactory defaultTag="div" fixedClassName={css} {...baseProps}>
       <i className={css.elem`spinner`.mod`${size.toString()}`.name} />

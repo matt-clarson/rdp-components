@@ -1,15 +1,16 @@
 import React from "react";
 import startCase from "lodash/startCase";
-import { ComponentFactory, RDPBaseProps } from "./utils/ComponentFactory";
-import { bem } from "./utils/css";
+import { ComponentFactory, RDPBaseProps } from "../utils/ComponentFactory";
+import { bem } from "../utils/css";
 
 import "./styles/icons.css";
 
 interface IconProps extends RDPBaseProps<HTMLElement> {
   icon: string;
+  title?: string;
 }
 
-const Icon: React.FC<IconProps> = ({ icon, title, ...baseProps }) => (
+export const Icon: React.FC<IconProps> = ({ icon, title, ...baseProps }) => (
   <ComponentFactory
     defaultTag="i"
     fixedClassName={bem`material-icons`}
@@ -19,5 +20,3 @@ const Icon: React.FC<IconProps> = ({ icon, title, ...baseProps }) => (
     {icon}
   </ComponentFactory>
 );
-
-export default Icon;
