@@ -4,9 +4,8 @@ import { Button, FloatingActionButton } from "../src/Button";
 
 export default {
   title: "Buttons",
-  parameters: { info: { inline: true } },
   decorators: [
-    (Story: React.ElementType) => (
+    (storyFn: () => any) => (
       <div
         style={{
           padding: "0 30%",
@@ -14,7 +13,7 @@ export default {
           justifyContent: "space-around"
         }}
       >
-        <Story />
+        {storyFn()}
       </div>
     )
   ]

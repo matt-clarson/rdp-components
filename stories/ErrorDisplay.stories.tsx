@@ -4,7 +4,6 @@ import { ErrorDisplay } from "../src/ErrorDisplay";
 
 export default {
   title: "Error Display",
-  parameters: { info: { inline: true } },
   component: ErrorDisplay
 };
 

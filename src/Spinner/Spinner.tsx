@@ -3,7 +3,7 @@ import { ComponentFactory, RDPBaseProps } from "../utils/ComponentFactory";
 import { bem } from "../utils/css";
 import { useMeasureString } from "../utils/measure-string";
 
-import "./styles/spinner.scss";
+import "../styles/spinner.scss";
 
 export enum SpinnerSize {
   EXTRA_SMALL = "xs",

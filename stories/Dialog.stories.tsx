@@ -9,7 +9,7 @@ import {
 } from "../src/Dialog";
 import { Button } from "../src/Button";
 
-export default { title: "Dialog", parameters: { info: { inline: true } } };
+export default { title: "Dialog" };
 
 export const dialog = () => {
   const size = select("Dialog Size", DialogSize, DialogSize.SMALL);

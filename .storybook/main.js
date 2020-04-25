@@ -2,7 +2,6 @@ const path = require("path");
 
 module.exports = {
   addons: [
-    "@storybook/preset-typescript",
     "@storybook/addon-actions/register",
     "@storybook/addon-knobs/register"
   ],
@@ -15,10 +14,23 @@ module.exports = {
         include: path.join(__dirname, "..", "src")
       },
       {
-        test: /\.tsx$/,
-        use: ["react-docgen-typescript-loader"]
+        test: /\.(ts|tsx)$/,
+        use: [
+          {
+            loader: require.resolve("ts-loader")
+          },
+          // Optional
+          {
+            loader: require.resolve("react-docgen-typescript-loader"),
+            options: {
+              tsconfigPath: path.resolve(__dirname, "..", "tsconfig.json"),
+              skipPropsWithoutDoc: true
+            }
+          }
+        ]
       }
     );
+    config.resolve.extensions.push(".ts", ".tsx");
     return config;
   }
 };
