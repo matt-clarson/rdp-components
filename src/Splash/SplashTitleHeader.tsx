@@ -1,6 +1,6 @@
 import React from "react";
 import { ComponentFactory, RDPBaseProps } from "../utils/ComponentFactory";
-import { css } from "./Splash";
+import { css } from "./_private";
 
 export interface SplashTitleHeaderProps
   extends RDPBaseProps<HTMLHeadingElement> {}

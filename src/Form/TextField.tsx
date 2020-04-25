@@ -2,7 +2,7 @@ import React, { useContext, useRef, useState } from "react";
 import nanoid from "nanoid";
 import { ComponentFactory, RDPBaseProps } from "../utils/ComponentFactory";
 import { bem } from "../utils/css";
-import { FormContext } from "./Form";
+import { FormContext } from "./_private";
 
 export interface TextFieldProps extends RDPBaseProps<HTMLElement> {
   /** The width of the TextField in pixels. If `fullWidth` is set, this value is ignored.*/

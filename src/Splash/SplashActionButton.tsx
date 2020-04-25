@@ -1,6 +1,6 @@
 import React from "react";
 import { ComponentFactory, RDPButtonProps } from "../utils/ComponentFactory";
-import { css } from "./Splash";
+import { css } from "./_private";
 
 export interface SplashActionButtonProps extends RDPButtonProps {}
 

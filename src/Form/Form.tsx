@@ -1,7 +1,7 @@
-import React, { createContext } from "react";
-import { bem } from "../utils/css";
+import React from "react";
 import { ComponentFactory, RDPBaseProps } from "../utils/ComponentFactory";
 import { Spinner } from "../Spinner";
+import { FormContext, css } from "./_private";
 
 export type FormData = { [key: string]: any };
 export type FormSubmitFn = (
@@ -19,9 +19,6 @@ export interface FormProps
   /** Called when the form submits - if the form is in autocontrolled mode, a second argument will be passed containing the auto generated contents of the form */
   onSubmit: FormSubmitFn;
 }
-
-export const css = bem`rdp-form`;
-export const FormContext = createContext({ autoControlled: false });
 
 const autoSubmit = (
   onSubmit: FormSubmitFn,

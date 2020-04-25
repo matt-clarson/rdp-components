@@ -2,7 +2,7 @@
   "name": "rdp-components",
   "version": "0.1.0",
   "description": "Red Panda Components for React",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "build": "npm run build:teardown && npm run build:core && npm run build:style && npm run build:storybook",
     "build:core": "tsc --build tsconfig.build.json",
@@ -17,11 +17,7 @@
     "version": "npm run build && git add docs",
     "postversion": "git push && git push --tags && npm publish"
   },
-  "keywords": [
-    "react",
-    "component-library",
-    "storybook"
-  ],
+  "keywords": ["react", "component-library", "storybook"],
   "author": "matt-clarson",
   "license": "MIT",
   "devDependencies": {

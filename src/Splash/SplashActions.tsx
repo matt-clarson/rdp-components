@@ -1,7 +1,8 @@
 import React from "react";
 import { ComponentFactory, RDPBaseProps } from "../utils/ComponentFactory";
 import { classes } from "../utils/css";
-import { SplashPosition, css as baseCss } from "./Splash";
+import { SplashPosition } from "./Splash";
+import { css as baseCss } from "./_private";
 
 export interface SplashActionsProps extends RDPBaseProps<HTMLElement> {
   position?: SplashPosition;

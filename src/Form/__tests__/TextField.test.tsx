@@ -1,7 +1,8 @@
 import React from "react";
 import { cleanup, fireEvent, render } from "@testing-library/react";
+import { FormContext } from "../_private";
 
-import { FormContext, TextField } from "../";
+import { TextField } from "../";
 
 jest.mock("nanoid", () => jest.fn(() => "text-field-id"));
 

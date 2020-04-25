@@ -1,16 +1,9 @@
-import React, { createContext, useState } from "react";
+import React, { useState } from "react";
 import { ComponentFactory, RDPBaseProps } from "../utils/ComponentFactory";
 import { bem } from "../utils/css";
+import { SectionGroupContext } from "./_private";
 
 export interface SectionGroupProps extends RDPBaseProps<HTMLElement> {}
-export interface ISectionGroupContext {
-  active: string | null;
-  setActive?: (active: string | null) => void;
-}
-
-export const SectionGroupContext = createContext<ISectionGroupContext>({
-  active: null
-});
 
 export const SectionGroup: React.FC<SectionGroupProps> = ({
   children,

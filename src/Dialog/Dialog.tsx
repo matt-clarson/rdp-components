@@ -1,16 +1,12 @@
-import React, { createContext } from "react";
+import React from "react";
 import { ComponentFactory, RDPBaseProps } from "../utils/ComponentFactory";
-import { BemBlock as _BemBlock, bem } from "../utils/css";
+import { DialogContext, IDialogContext, css } from "./_private";
 
 export enum DialogSize {
   SMALL = "s",
   MEDIUM = "m",
   LARGE = "l",
   FULL_SCREEN = "fs"
-}
-
-export interface IDialogContext {
-  onClose: () => void;
 }
 
 export interface DialogProps
@@ -24,11 +20,6 @@ export interface DialogProps
   /** Sets whether the Dialog is open or closed */
   open?: boolean;
 }
-
-export const css = bem`rdp-dialog`;
-export const DialogContext = createContext<IDialogContext>({
-  onClose: () => {}
-});
 
 export const Dialog: React.FC<DialogProps> = ({
   size = DialogSize.MEDIUM,

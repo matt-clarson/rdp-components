@@ -2,8 +2,9 @@ import React from "react";
 import { cleanup, fireEvent, render } from "@testing-library/react";
 import { mocked } from "ts-jest/utils";
 import nanoid from "nanoid";
+import { SectionGroupContext } from "../_private";
 
-import { SectionGroupContext, Section } from "../";
+import { Section } from "../";
 
 jest.mock("nanoid");
 

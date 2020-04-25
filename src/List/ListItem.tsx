@@ -1,6 +1,6 @@
 import React from "react";
 import { ComponentFactory, RDPBaseProps } from "../utils/ComponentFactory";
-import { css } from "./List";
+import { css } from "./_private";
 
 export interface ListItemProps
   extends React.LiHTMLAttributes<HTMLElement>,

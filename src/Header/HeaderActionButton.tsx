@@ -1,7 +1,7 @@
 import React from "react";
 import { ComponentFactory, RDPButtonProps } from "../utils/ComponentFactory";
 import { Icon } from "../Icon";
-import { css } from "./Header";
+import { css } from "./_private";
 
 export interface HeaderActionButtonProps extends RDPButtonProps {
   /** Sets the icon for the button, using Material Icons */

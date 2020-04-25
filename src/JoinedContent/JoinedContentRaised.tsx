@@ -1,5 +1,5 @@
 import React from "react";
-import { css } from "./JoinedContent";
+import { css } from "./_private";
 import { ComponentFactory, RDPBaseProps } from "../utils/ComponentFactory";
 
 export interface JoinedContentRaisedProps extends RDPBaseProps<HTMLElement> {}

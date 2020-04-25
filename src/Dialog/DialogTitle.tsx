@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { ComponentFactory, RDPBaseProps } from "../utils/ComponentFactory";
-import { DialogContext, css } from "./Dialog";
 import { Icon } from "../Icon";
+import { DialogContext, css } from "./_private";
 
 export interface DialogTitleProps extends RDPBaseProps<HTMLElement> {
   /** If true, the title will display an 'X' button to close the dialog */

@@ -1,5 +1,5 @@
 import React from "react";
-import { css } from "./JoinedContent";
+import { css } from "./_private";
 import { Section } from "../Section";
 import { RDPBaseProps } from "../utils/ComponentFactory";
 

@@ -1,6 +1,7 @@
 import React from "react";
 import { ComponentFactory, RDPBaseProps } from "../utils/ComponentFactory";
-import { bem, classes } from "../utils/css";
+import { classes } from "../utils/css";
+import { css } from "./_private";
 
 export enum SplashPosition {
   LEFT = "left",
@@ -14,8 +15,6 @@ export interface SplashProps
   /** The positioning to use to render the splash children, using an enum `SplashPosition` {LEFT, CENTRE, RIGHT} */
   position?: SplashPosition;
 }
-
-export const css = bem`rdp-splash`;
 
 export const Splash: React.FC<SplashProps> = ({
   children,

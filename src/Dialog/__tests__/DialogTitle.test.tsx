@@ -1,7 +1,8 @@
 import React from "react";
 import { cleanup, render, fireEvent } from "@testing-library/react";
+import { DialogContext } from "../_private";
 
-import { DialogContext, DialogTitle } from "../";
+import { DialogTitle } from "../";
 
 describe("<DialogTitle />", () => {
   beforeEach(cleanup);
