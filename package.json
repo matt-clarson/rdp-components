@@ -6,13 +6,16 @@
   "scripts": {
     "build": "npm run build:teardown && npm run build:core && npm run build:style && npm run build:storybook",
     "build:core": "tsc --build tsconfig.build.json",
+    "build:storybook": "build-storybook --config-dir .storybook --output-dir .storybook.out",
     "build:style": "node-sass ./styles/core/ --output ./lib/css/ --output-style compressed && node-sass ./styles/rdp-styles.scss  > ./lib/css/rdp-styles.min.css && cp -R ./styles/ ./lib/scss",
-    "build:storybook": "build-storybook --config-dir .storybook --output-dir .storybok.out",
     "build:teardown": "rm -rf ./lib",
     "storybook": "start-storybook --ci -p 5000",
     "test": "jest",
     "test:watch": "jest --watch",
-    "test:coverage": "USE_COVERAGE=true jest"
+    "test:coverage": "USE_COVERAGE=true jest",
+    "preversion": "npm test",
+    "version": "npm run build && git add .storybook.out",
+    "postversion": "git push && git push --tags && npm publish"
   },
   "keywords": ["react", "component-library", "storybook"],
   "author": "matt-clarson",
@@ -46,5 +49,9 @@
   },
   "dependencies": {
     "nanoid": "^2.1.11"
+  },
+  "peerDependencies": {
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0"
   }
 }
