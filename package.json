@@ -6,7 +6,7 @@
   "scripts": {
     "build": "npm run build:teardown && npm run build:core && npm run build:style && npm run build:storybook",
     "build:core": "tsc --build tsconfig.build.json",
-    "build:storybook": "build-storybook --config-dir .storybook --output-dir .storybook.out",
+    "build:storybook": "build-storybook --config-dir .storybook --output-dir ./docs",
     "build:style": "node-sass ./styles/core/ --output ./lib/css/ --output-style compressed && node-sass ./styles/rdp-styles.scss  > ./lib/css/rdp-styles.min.css && cp -R ./styles/ ./lib/scss",
     "build:teardown": "rm -rf ./lib",
     "storybook": "start-storybook --ci -p 5000",

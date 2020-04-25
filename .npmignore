@@ -1,9 +1,9 @@
 .git/
 .github/
 .storybook/
-.storybook.out/
-coverage/
 build/
+coverage/
+docs/
 node_modules/
 src/
 stories/
