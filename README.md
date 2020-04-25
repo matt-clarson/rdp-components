@@ -15,7 +15,7 @@ npm install --save-prod rdp-components
 
 ```javascript
 import React from "react";
-import { Button } from "rdp-components/Button";
+import { Button } from "rdp-components";
 
 const App = () => {
   return (
@@ -33,7 +33,7 @@ Use the `Theme` component to apply a theme to the components.
 ```javascript
 import React from "react";
 import ReactDOM from "react-dom";
-import { Theme } from "rdp-components/Theme";
+import { Theme } from "rdp-components";
 
 import MyApp from "./MyApp";
 
