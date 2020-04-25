@@ -9,6 +9,7 @@ import "../styles/error.scss";
 export type DisplayableError = React.ReactNode | Error;
 
 export interface ErrorDisplayProps extends RDPBaseProps<HTMLElement> {
+  /** The error to display. */
   error: DisplayableError;
 }
 

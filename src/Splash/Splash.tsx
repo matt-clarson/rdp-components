@@ -13,6 +13,7 @@ export enum SplashPosition {
 export interface SplashProps
   extends React.DialogHTMLAttributes<HTMLElement>,
     RDPBaseProps<HTMLElement> {
+  /** The positioning to use to render the splash children, using an enum `SplashPosition` {LEFT, CENTRE, RIGHT} */
   position?: SplashPosition;
 }
 

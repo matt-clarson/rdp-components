@@ -14,8 +14,11 @@ export type FormSubmitFn = (
 export interface FormProps
   extends React.FormHTMLAttributes<HTMLFormElement>,
     RDPBaseProps<HTMLFormElement> {
+  /** If true, the form will be replaced with a loading <Spinner /> */
   submitting?: boolean;
+  /** If true, the form will be in auto controlled mode. Any inputs in the form will be automatically read when the Submit event fires, using the `name` attributes on the inputs to build up an object (`FormData`) that will be passed as a second argument to the `onSubmit` callback */
   autoControlled?: boolean;
+  /** Called when the form submits - if the form is in autocontrolled mode, a second argument will be passed containing the auto generated contents of the form */
   onSubmit: FormSubmitFn;
 }
 

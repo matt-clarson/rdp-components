@@ -6,7 +6,9 @@ import { bem } from "../utils/css";
 import "../styles/icons.css";
 
 interface IconProps extends RDPBaseProps<HTMLElement> {
+  /** The icon to display, using Material Icons */
   icon: string;
+  /** The title of the icon, displayed to the user when the icon is hovered */
   title?: string;
 }
 

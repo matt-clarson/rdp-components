@@ -4,6 +4,7 @@ import { Icon } from "../Icon";
 import { css } from "./List";
 
 export interface ListItemActionButtonProps extends RDPButtonProps {
+  /** Sets the icon for the button, using Material Icons */
   icon?: string;
 }
 

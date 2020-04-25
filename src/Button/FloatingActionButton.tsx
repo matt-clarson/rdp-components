@@ -6,9 +6,13 @@ import { Icon } from "../Icon";
 import "../styles/button.scss";
 
 export interface FloatingActionButtonProps extends RDPButtonProps {
+  /** Sets the icon for the button, using Material Icons */
   icon: string;
 }
 
+/**
+ * A Floating Action Button (FAB). Use this to provide a key call to action on your pages. Note that there should ideally only be one FAB per page
+ */
 export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
   disabled,
   icon,

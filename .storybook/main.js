@@ -24,7 +24,13 @@ module.exports = {
             loader: require.resolve("react-docgen-typescript-loader"),
             options: {
               tsconfigPath: path.resolve(__dirname, "..", "tsconfig.json"),
-              skipPropsWithoutDoc: true
+              propFilter: prop => {
+                if (prop.parent) {
+                  return !prop.parent.fileName.includes("node_modules");
+                }
+
+                return true;
+              }
             }
           }
         ]

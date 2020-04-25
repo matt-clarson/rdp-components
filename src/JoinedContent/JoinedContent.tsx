@@ -10,6 +10,7 @@ export enum FloatContent {
 }
 
 export interface JoinedContentProps extends RDPBaseProps<HTMLElement> {
+  /** Sets the layout of the joined content, using an enum `FloatContent` {LEFT, RIGHT}. LEFT will position the raised section of the JoinedContent on the left, and RIGHT will position it on the right */
   floatContent?: FloatContent;
 }
 

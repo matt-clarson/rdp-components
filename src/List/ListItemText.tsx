@@ -3,6 +3,7 @@ import { ComponentFactory, RDPBaseProps } from "../utils/ComponentFactory";
 import { css } from "./List";
 
 export interface ListItemTextProps extends RDPBaseProps<HTMLElement> {
+  /** If true, renders the ListItemText as smaller, positioned under a sibling ListItemText that doesn't have the `secondary` prop set to true */
   secondary?: boolean;
 }
 

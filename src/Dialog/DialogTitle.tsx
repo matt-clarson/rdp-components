@@ -4,6 +4,7 @@ import { DialogContext, css } from "./Dialog";
 import { Icon } from "../Icon";
 
 export interface DialogTitleProps extends RDPBaseProps<HTMLElement> {
+  /** If true, the title will display an 'X' button to close the dialog */
   closeButton?: boolean;
 }
 

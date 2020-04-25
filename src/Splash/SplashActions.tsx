@@ -10,6 +10,7 @@ export interface SplashActionsProps extends RDPBaseProps<HTMLElement> {
 }
 
 export const SplashActions: React.FC<SplashActionsProps> = ({
+  /** The positioning to use to render the splash actions, using an enum `SplashPosition` {LEFT, CENTRE, RIGHT} */
   position = SplashPosition.LEFT,
   children,
   ...baseProps

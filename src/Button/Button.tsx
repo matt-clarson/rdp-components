@@ -5,10 +5,15 @@ import { bem } from "../utils/css";
 import "../styles/button.scss";
 
 export interface ButtonProps extends RDPButtonProps {
+  /** Style the button as a 'Transparent' button */
   transparent?: boolean;
+  /** Style the button as a 'Danger' button */
   danger?: boolean;
 }
 
+/**
+ * A button component. Probably the simplest component there is.
+ */
 export const Button: React.FC<ButtonProps> = ({
   transparent,
   disabled,

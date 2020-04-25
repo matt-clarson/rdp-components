@@ -7,6 +7,7 @@ import "../styles/splash.scss";
 
 export interface SplashTitleSubHeaderProps
   extends RDPBaseProps<HTMLParagraphElement> {
+  /** The positioning to use to render the splash subheader, using an enum `SplashPosition` {LEFT, CENTRE, RIGHT} */
   position?: SplashPosition;
 }
 

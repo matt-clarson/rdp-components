@@ -7,6 +7,7 @@ import { SectionGroupContext } from "./SectionGroup";
 import "../styles/section.scss";
 
 export interface SectionProps extends RDPBaseProps<HTMLElement> {
+  /** If true, the Section will be isplayed as 'flat' - i.e. with a thin border rather than a drop shadow effect */
   flat?: boolean;
 }
 

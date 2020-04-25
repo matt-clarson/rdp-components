@@ -6,6 +6,7 @@ import { css } from "./Header";
 import "../styles/header.scss";
 
 export interface HeaderActionButtonProps extends RDPButtonProps {
+  /** Sets the icon for the button, using Material Icons */
   icon?: string;
 }
 

@@ -16,7 +16,11 @@ export enum SpinnerSize {
 const sizes = { xs: 60, s: 110, m: 160, l: 210, xl: 310 };
 
 export interface SpinnerProps extends RDPBaseProps<HTMLElement> {
+  /** Sets the size of the spinner using the `SpinnerSize` enum {EXTRA_SMALL, SMALL, MEDIUM, LARGE, EXTRA_LARGE}
+   * @default "SpinnerSize.MEDIUM"
+   */
   size?: SpinnerSize;
+  /** A message to display with the Spinner - if the text is small enough it will be pisition inside the spinner circle, other wise it will be positioned below the spinner */
   message?: string;
 }
 
