@@ -3,8 +3,6 @@ import { css } from "./JoinedContent";
 import { Section } from "../Section";
 import { RDPBaseProps } from "../utils/ComponentFactory";
 
-import "../styles/joined-content.scss";
-
 export interface JoinedContentBaseProps
   extends Omit<RDPBaseProps<HTMLElement>, "title"> {
   /** The title of the `JoinedContent` section - the title of whatever content you are displaying */

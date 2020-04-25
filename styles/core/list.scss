@@ -30,8 +30,8 @@
   }
 
   &__item-action-button {
-    @extend %button-base;
-    @extend %transparent-button;
+    @include button-base;
+    @include transparent-button;
 
     &:first-child {
       grid-area: btn-l;

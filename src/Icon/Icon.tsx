@@ -3,8 +3,6 @@ import startCase from "lodash/startCase";
 import { ComponentFactory, RDPBaseProps } from "../utils/ComponentFactory";
 import { bem } from "../utils/css";
 
-import "../styles/icons.css";
-
 interface IconProps extends RDPBaseProps<HTMLElement> {
   /** The icon to display, using Material Icons */
   icon: string;

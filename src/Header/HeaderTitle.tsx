@@ -2,8 +2,6 @@ import React from "react";
 import { ComponentFactory, RDPBaseProps } from "../utils/ComponentFactory";
 import { css } from "./Header";
 
-import "../styles/header.scss";
-
 export interface HeaderTitleProps extends RDPBaseProps<HTMLHeadingElement> {}
 
 export const HeaderTitle: React.FC<HeaderTitleProps> = ({

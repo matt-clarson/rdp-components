@@ -1,7 +1,7 @@
 @import "./common.scss";
 @import "./section.scss";
 
-%dialog-separator {
+@mixin dialog-separator {
   &:not(:last-child) {
     border-bottom: 1px solid rgb(100, 100, 100);
   }
@@ -44,43 +44,43 @@
   @include section-shadow;
 
   &--s {
-    @extend #{$self};
     @include dialog-size(250px, 180px);
+    @extend #{$self};
   }
 
   &--m {
-    @extend #{$self};
     @include dialog-size(400px, 300px);
+    @extend #{$self};
   }
 
   &--l {
-    @extend #{$self};
     @include dialog-size(600px, 450px);
+    @extend #{$self};
   }
 
   &--fs {
-    @extend #{$self};
     @include dialog-size(90vw, 90vh);
+    @extend #{$self};
   }
 
   &__title {
-    @extend %dialog-separator;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
     padding: 0 5px 0 15px;
+    @include dialog-separator;
   }
 
   &__title-close-button {
-    @extend %button-base;
-    @extend %transparent-button;
+    @include transparent-button;
+    @include button-base;
   }
 
   &__content {
-    @extend %dialog-separator;
     flex-grow: 1;
     padding: 0 5px 0 15px;
+    @include dialog-separator;
   }
 
   &__actions {

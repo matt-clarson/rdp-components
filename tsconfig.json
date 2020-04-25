@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "outDir": "build/lib",
     "module": "commonjs",
     "target": "es5",
     "lib": ["es5", "es6", "es7", "es2017", "dom"],
@@ -8,7 +7,6 @@
     "allowJs": false,
     "jsx": "react",
     "moduleResolution": "node",
-    "rootDirs": ["src", "stories"],
     "baseUrl": "src",
     "strict": true,
     "suppressImplicitAnyIndexErrors": true,
@@ -17,6 +15,5 @@
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true
   },
-  "include": ["src/**/*", "stories/**/*"],
   "exclude": ["node_modules", "build", "scripts"]
 }

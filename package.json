@@ -4,16 +4,17 @@
   "description": "Red Panda Components for React",
   "main": "index.js",
   "scripts": {
-    "storybook:dev": "start-storybook --ci -p 5000",
+    "build": "npm run build:teardown && npm run build:core && npm run build:style && npm run build:storybook",
+    "build:core": "tsc --build tsconfig.build.json",
+    "build:style": "node-sass ./styles/core/ --output ./lib/css/ --output-style compressed && node-sass ./styles/rdp-styles.scss  > ./lib/css/rdp-styles.min.css && cp -R ./styles/ ./lib/scss",
+    "build:storybook": "build-storybook --config-dir .storybook --output-dir .storybok.out",
+    "build:teardown": "rm -rf ./lib",
+    "storybook": "start-storybook --ci -p 5000",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "USE_COVERAGE=true jest"
   },
-  "keywords": [
-    "react",
-    "component-library",
-    "storybook"
-  ],
+  "keywords": ["react", "component-library", "storybook"],
   "author": "matt-clarson",
   "license": "MIT",
   "devDependencies": {

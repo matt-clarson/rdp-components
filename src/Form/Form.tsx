@@ -3,8 +3,6 @@ import { bem } from "../utils/css";
 import { ComponentFactory, RDPBaseProps } from "../utils/ComponentFactory";
 import { Spinner } from "../Spinner";
 
-import "../styles/form.scss";
-
 export type FormData = { [key: string]: any };
 export type FormSubmitFn = (
   event: React.FormEvent<HTMLFormElement>,

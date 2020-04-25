@@ -1,5 +1,7 @@
 const path = require("path");
 
+const TS_CONFIG = path.resolve(__dirname, "..", "tsconfig.stories.json");
+
 module.exports = {
   addons: [
     "@storybook/addon-actions/register",
@@ -11,19 +13,22 @@ module.exports = {
       {
         test: /\.scss$/,
         use: ["style-loader", "css-loader", "sass-loader"],
-        include: path.join(__dirname, "..", "src")
+        include: path.join(__dirname, "..", "styles")
       },
       {
         test: /\.(ts|tsx)$/,
         use: [
           {
-            loader: require.resolve("ts-loader")
+            loader: require.resolve("ts-loader"),
+            options: {
+              configFile: TS_CONFIG
+            }
           },
           // Optional
           {
             loader: require.resolve("react-docgen-typescript-loader"),
             options: {
-              tsconfigPath: path.resolve(__dirname, "..", "tsconfig.json"),
+              tsconfigPath: TS_CONFIG,
               propFilter: prop => {
                 if (prop.parent) {
                   return !prop.parent.fileName.includes("node_modules");

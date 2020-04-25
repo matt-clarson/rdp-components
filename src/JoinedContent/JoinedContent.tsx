@@ -2,8 +2,6 @@ import React from "react";
 import { ComponentFactory, RDPBaseProps } from "../utils/ComponentFactory";
 import { bem } from "../utils/css";
 
-import "../styles/joined-content.scss";
-
 export enum FloatContent {
   LEFT = "left",
   RIGHT = "right"

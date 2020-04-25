@@ -4,8 +4,6 @@ import { ComponentFactory, RDPBaseProps } from "../utils/ComponentFactory";
 import { bem } from "../utils/css";
 import { FormContext } from "./Form";
 
-import "../styles/text-field.scss";
-
 export interface TextFieldProps extends RDPBaseProps<HTMLElement> {
   /** The width of the TextField in pixels. If `fullWidth` is set, this value is ignored.*/
   width?: number;

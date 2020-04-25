@@ -2,8 +2,8 @@
 
 .rdp-button {
   $self: &;
+  @include button-base;
   background-color: var(--rdp-theme-primary);
-  @extend %button-base;
   color: var(--rdp-theme-text-on-primary);
   position: relative;
   border: 2px outset var(--rdp-theme-primary);
@@ -14,12 +14,12 @@
 
   &::before {
     content: "";
+    @include button-base;
     position: absolute;
     top: -2px;
     right: -2px;
     bottom: -2px;
     left: -2px;
-    @extend %button-base;
   }
 
   &:hover {
@@ -53,8 +53,8 @@
 }
 
 .rdp-transparent-button {
-  @extend %button-base;
-  @extend %transparent-button;
+  @include button-base;
+  @include transparent-button;
 }
 
 .rdp-floating-action-button {

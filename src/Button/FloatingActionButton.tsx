@@ -3,8 +3,6 @@ import { ComponentFactory, RDPButtonProps } from "../utils/ComponentFactory";
 import { bem } from "../utils/css";
 import { Icon } from "../Icon";
 
-import "../styles/button.scss";
-
 export interface FloatingActionButtonProps extends RDPButtonProps {
   /** Sets the icon for the button, using Material Icons */
   icon: string;

@@ -4,7 +4,8 @@ const config = {
   moduleNameMapper: {
     "^.+\\.s?css$": "<rootDir>/test-utils/css-stub.js"
   },
-  setupFilesAfterEnv: ["<rootDir>/test-utils/setup.js"]
+  setupFilesAfterEnv: ["<rootDir>/test-utils/setup.js"],
+  testPathIgnorePatterns: ["/node_modules/", "/lib/"]
 };
 
 if (process.env.USE_COVERAGE) {

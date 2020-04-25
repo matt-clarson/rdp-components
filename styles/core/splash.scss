@@ -66,8 +66,8 @@
     }
 
     #{$self}__action-button {
-      @extend %button-base;
-      @extend %transparent-button;
+      @include button-base;
+      @include transparent-button;
       border: 2px solid var(--rdp-theme-text-on-primary);
       text-decoration: none;
 

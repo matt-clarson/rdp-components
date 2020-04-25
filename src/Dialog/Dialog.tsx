@@ -2,8 +2,6 @@ import React, { createContext } from "react";
 import { ComponentFactory, RDPBaseProps } from "../utils/ComponentFactory";
 import { BemBlock as _BemBlock, bem } from "../utils/css";
 
-import "../styles/dialog.scss";
-
 export enum DialogSize {
   SMALL = "s",
   MEDIUM = "m",

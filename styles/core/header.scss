@@ -30,7 +30,7 @@
   }
 
   &__action-button {
-    @extend %button-base;
-    @extend %transparent-button;
+    @include transparent-button;
+    @include button-base;
   }
 }

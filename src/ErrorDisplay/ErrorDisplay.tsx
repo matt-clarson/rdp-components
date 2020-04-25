@@ -4,8 +4,6 @@ import { ComponentFactory, RDPBaseProps } from "../utils/ComponentFactory";
 import { Icon } from "../Icon";
 import { bem } from "../utils/css";
 
-import "../styles/error.scss";
-
 export type DisplayableError = React.ReactNode | Error;
 
 export interface ErrorDisplayProps extends RDPBaseProps<HTMLElement> {

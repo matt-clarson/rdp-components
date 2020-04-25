@@ -2,8 +2,6 @@ import React from "react";
 import { ComponentFactory, RDPButtonProps } from "../utils/ComponentFactory";
 import { bem } from "../utils/css";
 
-import "../styles/button.scss";
-
 export interface ButtonProps extends RDPButtonProps {
   /** Style the button as a 'Transparent' button */
   transparent?: boolean;
